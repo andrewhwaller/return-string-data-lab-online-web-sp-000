@@ -20,9 +20,9 @@ class ProductsController < ApplicationController
   end
 
 
-    def description
-      render plain: @product.description
-    end
+  def description
+    render plain: @product.description
+  end
 
   private
 
