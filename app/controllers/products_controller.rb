@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.save
     redirect_to products_path
-  end
+
 
   def inventory
     render plain: @product.inventory != 0
