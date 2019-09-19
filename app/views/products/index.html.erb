@@ -12,7 +12,7 @@ $(function () {
     let id = $(this).data("id");
     $.get("/products/" + id + "/description", function(data) {
       // Replace text of body-id div
-      $("#body-" + id).text(data);
+      $(".description-" + id).text(data);
     });
   });
 });
