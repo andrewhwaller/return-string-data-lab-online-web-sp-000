@@ -7,16 +7,13 @@
 <% end %>
 
 <script type="text/javascript" charset="utf-8">
-  $(function () {
-    $(".js-more").on('click', function() {
-      // get the id from the data attribute
-      let id = $(this).data("id");
-       $.get("/products/" + id + "/description", function(data) {
-         $("#product-" + id + " .description").text(data)
-       });
-       $.get("/products/" + id + "/inventory", function(data) {
-         $("#product-" + id + " .description").append(data)
-       });
+$(function () {
+  $(".js-more").on('click', function() {
+    let id = $(this).data("id");
+    $.get("/posts/" + id + "/body", function(data) {
+      // Replace text of body-id div
+      $("#body-" + id).text(data);
     });
   });
+});
 </script>
